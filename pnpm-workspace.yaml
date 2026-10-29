@@ -1,0 +1,5 @@
+allowBuilds:
+  esbuild: true
+
+# Spike local : on accepte les versions publiées le jour même.
+minimumReleaseAge: 0

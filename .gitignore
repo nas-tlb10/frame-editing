@@ -1,0 +1,31 @@
+# Dépendances
+node_modules/
+
+# Next
+.next/
+next-env.d.ts
+*.tsbuildinfo
+
+# Rendus et fichiers de travail
+.work/
+.renders/
+
+# Secrets
+.env
+.env.local
+.env*.local
+
+# Assets utilisateur : ne pas committer par défaut
+test-assets/**/*.mp4
+test-assets/**/*.mov
+test-assets/**/*.MP4
+test-assets/**/*.MOV
+test-assets/**/*.mp3
+test-assets/**/*.wav
+
+# Skills tiers (Remotion) : installés localement, non redistribués
+.claude/skills/
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frame — Éditeur B</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+body{margin:0}
+.ws{display:grid;grid-template-columns:280px minmax(0,1fr) 360px;flex:1}
+.mut{color:#a1a1aa}
+button{font-family:inherit;cursor:pointer}
+.b{height:36px;padding:0 14px;border-radius:9px;border:1px solid #3f3f46;background:#18181b;color:#fafafa;font-weight:600;font-size:13px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:#18181b;border:1px solid #27272a;font-size:12px;color:#d4d4d8}
+.pill i{width:6px;height:6px;border-radius:50%;background:#4ade80}
+.fl{display:flex;align-items:center;gap:10px;padding:8px;border-radius:10px;background:#18181b;border:1px solid #27272a;font-size:12px}
+@media (max-width:1100px){.ws{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div style="min-height:900px;display:flex;flex-direction:column;background:#0a0a0a;color:#fafafa;font-family:'Inter',system-ui,sans-serif;font-size:14px;line-height:1.5">
+<header style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:10px 16px;border-bottom:1px solid #27272a">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:26px;height:26px;border-radius:7px;background:#fafafa;color:#0a0a0a;font-weight:800;display:flex;align-items:center;justify-content:center">F</span><span class="mut">Projets /</span><label for="pn" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Nom du projet</label><input id="pn" value="Mon Projet Docu" style="width:150px;border:1px solid transparent;border-radius:6px;background:transparent;color:#fafafa;font:600 14px 'Inter',sans-serif;padding:4px 6px"><span class="pill"><i></i>Enregistré</span>
+<button class="b" style="display:inline-flex;align-items:center;gap:6px">v3<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><span class="mut" style="font-size:12px">v1 → v3 · undo exact</span></div>
+<div style="display:flex;align-items:center;gap:10px"><button class="b">Générer l’aperçu 720p · 1 crédit</button><button class="b" style="border:0;background:linear-gradient(90deg,#4f46e5,#7c3aed);color:#fff">Exporter la vidéo</button><span class="pill" style="font-weight:600">24 cr</span><span aria-label="Profil" style="width:32px;height:32px;border-radius:50%;background:#3f3f46;display:inline-block"></span></div>
+</header>
+<div class="ws">
+<aside style="border-right:1px solid #27272a;padding:14px;display:flex;flex-direction:column;gap:14px;min-width:0">
+<div style="display:flex;gap:4px;padding:3px;border-radius:10px;background:#18181b"><button style="flex:1;height:30px;border:0;border-radius:8px;background:#27272a;color:#fafafa;font-weight:600;font-size:13px">Médias</button><button style="flex:1;height:30px;border:0;border-radius:8px;background:transparent;color:#a1a1aa;font-weight:600;font-size:13px">Scènes</button></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div class="fl"><span style="width:44px;height:28px;border-radius:5px;background:linear-gradient(135deg,#3730a3,#18181b);flex:none"></span><span style="flex:1;min-width:0"><b>A_001.mp4</b><br><span class="mut">0:48 · 1920×1080</span></span><span class="pill"><i></i>ready</span></div>
+<div class="fl"><span style="width:44px;height:28px;border-radius:5px;background:linear-gradient(135deg,#0f766e,#18181b);flex:none"></span><span style="flex:1;min-width:0"><b>A_002.mp4</b><br><span class="mut">1:12 · 1920×1080</span></span><span class="pill"><i></i>ready</span></div>
+<button class="b" style="border-style:dashed;background:transparent">+ Ajouter des fichiers</button></div>
+<div><b class="mut" style="font-size:11px;letter-spacing:0.08em">SCÈNES DÉTECTÉES</b>
+<div style="display:flex;flex-direction:column;gap:6px;margin-top:8px"><div class="fl" style="border-color:#6366f1">1. Intro <span class="mut" style="margin-left:auto">0–15 s</span></div><div class="fl">2. Core <span class="mut" style="margin-left:auto">15–45 s</span></div><div class="fl">3. Conclusion <span class="mut" style="margin-left:auto">45–60 s</span></div></div></div>
+</aside>
+<main style="padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0;align-items:center">
+<div style="width:100%;max-width:900px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px"><span class="pill" style="color:#a5b4fc">Live preview · gratuite, dans le navigateur</span><span style="display:flex;gap:6px"><button class="b" style="border-color:#6366f1">16:9</button><button class="b">9:16</button><button class="b">1:1</button></span></div>
+<div style="width:100%;max-width:900px;aspect-ratio:16/9;border-radius:14px;border:1px solid #27272a;background:linear-gradient(150deg,#3730a3,#18181b 70%);position:relative;overflow:hidden"><div style="position:absolute;left:7%;top:14%;max-width:60%;font-weight:700;font-size:clamp(20px,3.8vw,46px);line-height:1.08;letter-spacing:-0.03em">Le recul des glaciers, en trente ans</div><div style="position:absolute;left:7%;bottom:9%;padding:8px 12px;background:rgba(10,10,10,0.8);border-left:3px solid #a5b4fc;font-size:13px;font-weight:600">Dr Claire Vasseur · Glaciologue</div></div>
+<div style="width:100%;max-width:900px;display:flex;align-items:center;gap:14px"><button aria-label="Lecture" style="width:40px;height:40px;border-radius:50%;border:0;background:#fafafa;color:#0a0a0a;display:flex;align-items:center;justify-content:center;flex:none"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></button><div style="flex:1;height:6px;border-radius:3px;background:#27272a"><div style="width:23%;height:6px;border-radius:3px;background:#a5b4fc"></div></div><span style="font-variant-numeric:tabular-nums;font-weight:600">00:14 <span class="mut">/ 01:00</span></span></div>
+</main>
+<aside style="border-left:1px solid #27272a;display:flex;flex-direction:column;min-width:0">
+<div style="padding:14px 16px;border-bottom:1px solid #27272a"><b>Director</b><div class="mut" style="font-size:12px">Chat de retouche · EditOps typées</div></div>
+<div style="flex:1;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="align-self:flex-end;max-width:88%;padding:10px 12px;border-radius:12px 12px 4px 12px;background:#4f46e5">Peux-tu dynamiser l’introduction et ajouter un titre percutant ?</div>
+<div style="align-self:flex-start;max-width:92%;display:flex;flex-direction:column;gap:8px"><div style="padding:10px 12px;border-radius:12px 12px 12px 4px;background:#18181b;border:1px solid #27272a">C’est fait : j’ai resserré l’intro et ajouté le titre.</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><span class="pill"><i></i>setText</span><span class="pill"><i></i>setTiming</span><span class="pill"><i></i>setStyle</span><span class="pill"><i></i>addTween</span></div></div>
+</div>
+<div style="padding:14px 16px;border-top:1px solid #27272a;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;gap:6px;flex-wrap:wrap"><button class="pill">Accélérer le rythme</button><button class="pill">Ajouter un sous-titre sur cette citation</button></div>
+<div style="display:flex;gap:8px;align-items:center;padding:6px 6px 6px 12px;border-radius:12px;border:1px solid #3f3f46;background:#18181b"><label for="m" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Message</label><input id="m" placeholder="Demandez, dirigez, planifiez…" style="flex:1;min-width:0;height:34px;border:0;outline:0;background:transparent;color:#fafafa;font:14px 'Inter',sans-serif"><button aria-label="Envoyer" style="width:36px;height:36px;border-radius:9px;border:0;background:linear-gradient(90deg,#4f46e5,#7c3aed);color:#fff;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button></div></div>
+</aside>
+</div>
+</div>
+</body>
+</html>
